@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo de Pantallas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="screen-container">
+        <h2>1. Pantalla de Autenticación (Login)</h2>
+        <div class="card">
+            
+            <h1>Iniciar Sesión</h1>
+            <form>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                <button type="submit" class="btn-primary">Ingresar</button>
+                <p class="form-link">¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="screen-container">
+        <h2>2. Pantalla de Registro de Usuario</h2>
+        <div class="card">
+            <h1>Crear Nueva Cuenta</h1>
+            <form>
+                <div class="form-group">
+                    <label for="nombres">Nombres</label>
+                    <input type="text" id="nombres" name="nombres">
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos">
+                </div>
+                <div class="form-group">
+                    <label for="cedula">Número de Cédula</label>
+                    <input type="text" id="cedula" name="cedula">
+                </div>
+                <div class="form-group">
+                    <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                </div>
+                <button type="submit" class="btn-primary">Registrarse</button>
+                <p class="form-link">Ya tengo una cuenta. <a href="#">Iniciar Sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="screen-container">
+        <h2>3. Pantalla de Notificación de Error</h2>
+        <div class="card error-card">
+            <div class="error-icon">&#10060;</div> <h3>Error de Autenticación</h3>
+            <p>El correo electrónico o la contraseña son incorrectos. Por favor, inténtalo de nuevo.</p>
+            <button class="btn-close">Cerrar</button>
+        </div>
+    </div>
+    <div class="screen-container pos-screen">
+        <h2>4. Pantalla Principal (Punto de Venta)</h2>
+        <div class="pos-layout">
+            <div class="product-grid">
+                <div class="product-card">Producto 1</div>
+                <div class="product-card">Producto 2</div>
+                <div class="product-card">Producto 3</div>
+                <div class="product-card">Producto 4</div>
+                <div class="product-card">Producto 5</div>
+                <div class="product-card">Producto 6</div>
+            </div>
+            <div class="cart-summary">
+                <h3>Resumen de Venta</h3>
+                <div class="cart-item"><span>Producto 2</span><span>$15.00</span></div>
+                <div class="cart-item"><span>Producto 4</span><span>$25.00</span></div>
+                <hr>
+                <div class="cart-total"><span>TOTAL</span><span>$40.00</span></div>
+                <button class="btn-primary">Pagar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="screen-container">
+        <h2>5. Pantalla de Crear Producto</h2>
+        <div class="card">
+            <h1>Añadir Nuevo Producto</h1>
+            <form>
+                <div class="form-group">
+                    <label for="product_name">Nombre del Producto</label>
+                    <input type="text" id="product_name">
+                </div>
+                <div class="form-group">
+                    <label for="product_price">Precio de Venta ($)</label>
+                    <input type="number" id="product_price" step="0.01">
+                </div>
+                 <div class="form-group">
+                    <label for="product_stock">Stock Inicial</label>
+                    <input type="number" id="product_stock">
+                </div>
+                <div class="form-group">
+                    <label for="product_desc">Descripción</label>
+                    <textarea id="product_desc" rows="3"></textarea>
+                </div>
+                <div class="form-buttons">
+                     <button type="button" class="btn-secondary">Cancelar</button>
+                     <button type="submit" class="btn-primary">Guardar Producto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

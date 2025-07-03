@@ -1,0 +1,220 @@
+:root {
+    --color-primary: #005A9C;
+    --color-background: #F2F2F2;
+    --color-error: #D9534F;
+    --color-text: #333;
+    --color-white: #FFFFFF;
+    --color-border: #DDDDDD;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.screen-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.card {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.logo-placeholder {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px dashed var(--color-border);
+    border-radius: 4px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: var(--color-text);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    box-sizing: border-box; /* Importante para que el padding no afecte el ancho */
+    font-size: 16px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #004a80; /* Un azul un poco más oscuro */
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-link a {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Estilos para la tarjeta de error */
+.error-card {
+    text-align: center;
+    border-left: 5px solid var(--color-error);
+}
+
+.error-icon {
+    font-size: 40px;
+    color: var(--color-error);
+    margin-bottom: 10px;
+}
+
+.error-card h3 {
+    margin: 10px 0;
+    color: var(--color-error);
+}
+
+.btn-close {
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background-color: #6c757d;
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* --- Estilos para la Pantalla de Punto de Venta --- */
+.pos-screen {
+    max-width: 1200px;
+}
+.pos-layout {
+    display: flex;
+    gap: 20px;
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-grid {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+.product-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.cart-summary {
+    flex: 1;
+    border-left: 1px solid var(--color-border);
+    padding-left: 20px;
+}
+.cart-item, .cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.cart-total {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.cart-summary .btn-primary {
+    margin-top: 20px;
+}
+
+/* --- Estilos para la Pantalla de Crear Producto --- */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    resize: vertical;
+}
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+.form-buttons .btn-primary, .form-buttons .btn-secondary {
+    width: auto;
+    padding: 12px 25px;
+}
+.btn-secondary {
+    background-color: #6c757d;
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}

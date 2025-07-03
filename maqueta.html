@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maqueta - Sistema POS</title>
+    <link rel="stylesheet" href="maqueta-styles.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- BARRA LATERAL DE NAVEGACIÓN -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">MiPOS</div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#punto-venta" class="nav-link active">Vender</a>
+                <a href="#gestion-productos" class="nav-link">Productos</a>
+                <a href="#gestion-clientes" class="nav-link">Clientes</a>
+                <a href="#reportes" class="nav-link">Reportes</a>
+            </nav>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main-content">
+            <!-- ENCABEZADO SUPERIOR -->
+            <header class="main-header">
+                <h2 id="page-title">Punto de Venta</h2>
+                <div class="user-info">
+                    <span>Juan Castañeda</span>
+                    <a href="#" class="logout-btn">Cerrar Sesión</a>
+                </div>
+            </header>
+
+            <!-- ÁREA DE CONTENIDO DE LA PÁGINA -->
+            <div class="page-content">
+                
+                <!-- MAQUETA 1: PUNTO DE VENTA -->
+                <section id="punto-venta" class="page-section">
+                    <div class="pos-layout">
+                        <div class="product-grid">
+                            <div class="product-card">Agua 600ml</div>
+                            <div class="product-card">Coca-Cola 1.5L</div>
+                            <div class="product-card">Papas Fritas</div>
+                            <div class="product-card">Chocolatina</div>
+                            <div class="product-card">Galletas</div>
+                            <div class="product-card">Jugo de Naranja</div>
+                        </div>
+                        <div class="cart-summary">
+                            <h3>Resumen de Venta</h3>
+                            <div class="cart-item"><span>Coca-Cola 1.5L</span><span>$4.500</span></div>
+                            <div class="cart-item"><span>Papas Fritas</span><span>$2.800</span></div>
+                            <hr>
+                            <div class="cart-total"><span>TOTAL</span><span>$7.300</span></div>
+                            <button class="btn-primary">Pagar</button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- MAQUETA 2: GESTIÓN DE PRODUCTOS -->
+                <section id="gestion-productos" class="page-section hidden">
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Listado de Productos</h3>
+                            <button class="btn-primary">Añadir Producto</button>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr><th>ID</th><th>Nombre</th><th>Precio</th><th>Stock</th><th>Acciones</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Agua 600ml</td><td>$2.000</td><td>150</td><td><button class="btn-secondary">Editar</button></td></tr>
+                                <tr><td>2</td><td>Coca-Cola 1.5L</td><td>$4.500</td><td>80</td><td><button class="btn-secondary">Editar</button></td></tr>
+                                <tr><td>3</td><td>Papas Fritas</td><td>$2.800</td><td>120</td><td><button class="btn-secondary">Editar</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- MAQUETA 3: GESTIÓN DE CLIENTES -->
+                <section id="gestion-clientes" class="page-section hidden">
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Listado de Clientes</h3>
+                            <button class="btn-primary">Añadir Cliente</button>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr><th>ID</th><th>Nombre</th><th>Cédula</th><th>Email</th><th>Acciones</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Carlos Pérez</td><td>12345678</td><td>carlos@email.com</td><td><button class="btn-secondary">Editar</button></td></tr>
+                                <tr><td>2</td><td>Ana García</td><td>87654321</td><td>ana@email.com</td><td><button class="btn-secondary">Editar</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- MAQUETA 4: REPORTES -->
+                <section id="reportes" class="page-section hidden">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>Ventas Hoy</h4>
+                            <p>$1,250,000</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Transacciones</h4>
+                            <p>82</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Producto Más Vendido</h4>
+                            <p>Coca-Cola 1.5L</p>
+                        </div>
+                    </div>
+                    <div class="table-container" style="margin-top: 30px;">
+                        <h3>Últimas Ventas</h3>
+                        <table>
+                            <thead>
+                                <tr><th>ID Venta</th><th>Cliente</th><th>Fecha</th><th>Total</th><th>Detalle</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1024</td><td>Carlos Pérez</td><td>03/07/2025</td><td>$45,000</td><td><button class="btn-secondary">Ver</button></td></tr>
+                                <tr><td>1023</td><td>Ana García</td><td>03/07/2025</td><td>$12,500</td><td><button class="btn-secondary">Ver</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageSections = document.querySelectorAll('.page-section');
+            const pageTitle = document.getElementById('page-title');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+
+                    // Gestionar clase activa en el menú
+                    navLinks.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Mostrar/ocultar secciones
+                    const targetId = this.getAttribute('href').substring(1);
+                    pageSections.forEach(section => {
+                        if (section.id === targetId) {
+                            section.classList.remove('hidden');
+                        } else {
+                            section.classList.add('hidden');
+                        }
+                    });
+
+                    // Actualizar título de la página
+                    pageTitle.textContent = this.textContent;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
