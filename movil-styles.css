@@ -1,0 +1,106 @@
+:root {
+    --primary-color: #007AFF; /* iOS-like blue */
+    --background-color: #F9F9F9;
+    --text-color: #1c1c1e;
+    --secondary-text-color: #8e8e93;
+    --separator-color: #e5e5ea;
+    --white-color: #FFFFFF;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.mobile-screen {
+    width: 375px;
+    height: 812px;
+    background-color: var(--background-color);
+    border: 10px solid black;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen-content {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* --- Login Screen --- */
+.logo { font-size: 32px; font-weight: bold; color: var(--primary-color); text-align: center; margin-bottom: 20px; }
+h1 { font-size: 28px; text-align: center; margin-bottom: 10px; }
+p { text-align: center; color: var(--secondary-text-color); margin-top: 0; margin-bottom: 30px; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; font-size: 14px; color: var(--secondary-text-color); margin-bottom: 5px; }
+.form-group input { width: 100%; padding: 15px; font-size: 17px; border: 1px solid var(--separator-color); border-radius: 10px; box-sizing: border-box; }
+.btn-primary { width: 100%; background-color: var(--primary-color); color: var(--white-color); border: none; padding: 16px; border-radius: 10px; font-size: 17px; font-weight: bold; cursor: pointer; }
+.form-link { display: block; text-align: center; margin-top: 20px; color: var(--primary-color); text-decoration: none; }
+
+/* --- Main App Screens --- */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(249, 249, 249, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--separator-color);
+}
+.app-header h2 { margin: 0; font-size: 18px; font-weight: 600; }
+.header-btn { font-size: 28px; color: var(--primary-color); background: none; border: none; cursor: pointer; }
+
+.screen-content.has-header { padding-top: 0; }
+.screen-content.has-footer { padding-bottom: 80px; }
+.screen-content.has-tabs { padding-bottom: 70px; }
+
+.search-bar { width: 100%; padding: 12px; margin: 15px 0; font-size: 16px; border-radius: 10px; border: 1px solid var(--separator-color); box-sizing: border-box; }
+.cart-list { display: flex; flex-direction: column; gap: 10px; }
+.cart-item { display: flex; justify-content: space-between; background: var(--white-color); padding: 15px; border-radius: 10px; }
+.price { font-weight: 600; }
+
+.app-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white-color);
+    padding: 15px 20px;
+    border-top: 1px solid var(--separator-color);
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+}
+.total-summary { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.total-price { font-size: 22px; font-weight: bold; }
+
+/* --- Product List Screen --- */
+.product-list { display: flex; flex-direction: column; }
+.product-list-item { display: flex; justify-content: space-between; align-items: center; background-color: var(--white-color); padding: 15px; border-bottom: 1px solid var(--separator-color); }
+.product-list-item h4 { margin: 0 0 5px 0; }
+.product-list-item p { margin: 0; color: var(--secondary-text-color); font-size: 14px; }
+.product-arrow { font-size: 20px; color: var(--separator-color); }
+
+/* --- Tab Bar --- */
+.tab-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(249, 249, 249, 0.9);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--separator-color);
+}
+.tab-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--secondary-text-color); font-size: 12px; }
+.tab-item.active { color: var(--primary-color); }
